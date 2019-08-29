@@ -1,4 +1,4 @@
-##Plus One
+##Add Binary
 
 ###题目
 Given two binary strings, return their sum (also a binary string).
