@@ -2,6 +2,7 @@
 
 ###题目
 Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.
+// canonical 最简洁的
 
 In a UNIX-style file system, a period . refers to the current directory. Furthermore, a double period .. moves the directory up a level. 
 For more information, see: Absolute path vs relative path in Linux/Unix
