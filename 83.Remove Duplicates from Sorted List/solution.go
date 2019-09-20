@@ -9,7 +9,7 @@ import (
 
 
 解题思路：
-当head.Next为空时返回,否则判断head的val与next的val是否相等,若相等,则迭代到一个不相等的next并覆盖head,若不相等,则用前面的方法递归处理后续节点
+
 
 关键点：
 
@@ -22,20 +22,7 @@ type ListNode struct {
 }
 
 func deleteDuplicates(head *ListNode) *ListNode { // faster 100% less 33.33%
-	if head == nil || head.Next == nil {
-		return head
-	}
-	// head重复则删除
-	if head.Val == head.Next.Val {
-		for head.Next != nil && head.Val == head.Next.Val {
-			head = head.Next
-		}
-		return deleteDuplicates(head.Next)
-	}
 
-	// head不重复则递归
-	head.Next = deleteDuplicates(head.Next)
-	return head
 }
 
 func main() {
