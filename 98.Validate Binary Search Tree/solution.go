@@ -22,7 +22,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func isValidBST(root *TreeNode) bool { // faster 100% less 50%
+func isValidBST(root *TreeNode) bool { // faster 53.27% less 100%
 	MIN, MAX := -1<<63, 1<<63-1
 	return r(MIN, MAX, root)
 }
@@ -33,6 +33,7 @@ func r(min, max int, root *TreeNode) bool {
 	}
 	return min < root.Val && root.Val < max && r(min, root.Val, root.Left) && r(root.Val, max, root.Right)
 }
+
 func main() {
 	root := new(TreeNode)
 	root.Val = 10
