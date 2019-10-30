@@ -1,4 +1,4 @@
-## Maximum Depth of Binary Tree
+## Construct Binary Tree from Preorder and Inorder Traversal
 
 ### 题目
 Given preorder and inorder traversal of a tree, construct the binary tree.
