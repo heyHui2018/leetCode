@@ -1,4 +1,4 @@
-## Convert Sorted Array to Binary Search Tree
+## Convert Sorted List to Binary Search Tree
 
 ### 题目
 Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
