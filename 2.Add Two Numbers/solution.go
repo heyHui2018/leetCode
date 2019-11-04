@@ -4,54 +4,23 @@ import (
 	"fmt"
 )
 
+/*
+要求：
+
+
+解题思路：
+同时遍历l1和l2,将对应值相加,有进位时放入carry,同时对10取余获得对应l3的值,最终输出l3
+
+关键点：
+(2 -> 4 -> 3)是342
+
+*/
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-/*
-思路一：
-l1、l2遍历直接相加后放入l3,有进位时放入temp,最后遍历l3输出
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var s3 []int
-	var temp, flag int
-Exit:
-	for {
-		switch {
-		case l1 == nil && l2 == nil:
-			if flag == 1 {
-				s3 = append(s3, 1)
-			}
-			break Exit
-		case l1 == nil:
-			temp = l2.Val + flag
-			l2 = l2.Next
-		case l2 == nil:
-			temp = l1.Val + flag
-			l1 = l1.Next
-		default:
-			temp = l1.Val + l2.Val + flag
-			l1 = l1.Next
-			l2 = l2.Next
-		}
-		flag = 0
-		if temp >= 10 {
-			flag = 1
-			temp = temp - 10
-		}
-		s3 = append(s3, temp)
-	}
-	var l3 *ListNode
-	for i := 1; i <= len(s3); i++ {
-		intTemp := s3[len(s3)-i]
-		temp := new(ListNode)
-		temp.Val = intTemp
-		temp.Next = l3
-		l3 = temp
-	}
-	return l3
-}
-*/
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	resPre := &ListNode{}
 	cur := resPre
@@ -84,8 +53,8 @@ func main() {
 	l1.Val = 5
 	l1.Next = new(ListNode)
 	l1.Next.Val = 4
-	l1.Next.Next = new(ListNode)
-	l1.Next.Next.Val = 3
+	// l1.Next.Next = new(ListNode)
+	// l1.Next.Next.Val = 3
 
 	l2 := new(ListNode)
 	l2.Val = 5
@@ -95,11 +64,7 @@ func main() {
 	l2.Next.Next.Val = 4
 
 	result := addTwoNumbers(l1, l2)
-	for {
-		if result.Next == nil {
-			fmt.Println("111111", result.Val)
-			break
-		}
+	for result != nil {
 		fmt.Println(result.Val)
 		result = result.Next
 	}
