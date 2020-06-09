@@ -5,51 +5,19 @@ import (
 )
 
 /*
-思路一：(未完成)
-利用回文字的中间为xx或xyx的特性逐一遍历,利用map存储字符上一次出现的位置(无法解决"babadada"中最长的是adada的情况)
-if len(s) < 2 {
-		return s
-	}
-	sList := strings.Split(s, "")
-	maxLength := 0
-	result := sList[0:1]
-	fmt.Println("result = ", result)
-	sMap := make(map[string]int) // map[v]index
-	for index, v := range sList {
-		flag := true
-		if _, ok := sMap[v]; ok {
-			tempList := sList[sMap[v] : index+1]
-			fmt.Println("tempList = ", tempList)
-			l := len(tempList)
-			for j, vv := range tempList {
-				fmt.Println("tempList[l-1-j] = ", tempList[l-1-j], " vv = ", vv)
-				if tempList[l-1-j] != vv {
-					flag = false
-					break
-				}
-			}
-			if !flag {
-				sMap[v] = index
-			} else {
-				if l > maxLength {
-					maxLength = l
-					result = tempList
-				}
-			}
-		} else {
-			sMap[v] = index
-		}
-	}
-	return strings.Join(result, "")
-*/
+要求:
 
-/*
-思路二:
+尝试：
+
+学习：
 逐一遍历s,若下一位与当前位的值相同,将下一位包括进此次回文,直至下一位的值不同,随后对这一段相同字符组成的串的首位进行逐一比较来确定前后边界
+
+关键点：
+
 */
 
 func longestPalindrome(s string) string { // faster 100% less 100%
-	if len(s) < 2 { // 肯定是回文，直接返回
+	if len(s) < 2 {                       // 肯定是回文，直接返回
 		return s
 	}
 	// 最长回文的首字符索引，和最长回文的长度

@@ -5,14 +5,14 @@ import (
 )
 
 /*
-要求：
+要求:
 
+尝试：
+用map存放nums,遍历nums,查询map是否存在target-nums[i]的值,存在则返回,否则将此num放入map并继续遍历
 
-解题思路：
-新建个map用于存放nums的数据,遍历nums,查询map是否存在target-nums[i]的值,存在则返回,否则继续遍历.
+学习：
 
 关键点：
-
 
 */
 
