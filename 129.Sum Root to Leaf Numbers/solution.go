@@ -23,7 +23,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func sumNumbers(root *TreeNode) int { // faster 98。35% less 63.7%
+func sumNumbers(root *TreeNode) int { // faster 98.35% less 63.7%
 
 	return 0
 }

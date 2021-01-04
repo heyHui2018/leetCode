@@ -16,7 +16,7 @@ import (
 
 */
 
-func solve(board [][]byte) { // faster 98。35% less 63.7%
+func solve(board [][]byte) { // faster 98.35% less 63.7%
 
 }
 

@@ -17,7 +17,7 @@ import (
 
 */
 
-func longestConsecutive(nums []int) int { // faster 98。35% less 63.7%
+func longestConsecutive(nums []int) int { // faster 98.35% less 63.7%
 	if len(nums) <= 1 {
 		return len(nums)
 	}
