@@ -24,6 +24,6 @@ Explanation: There is no cycle in the linked list.
 ```
 
 Constraints:
-* The number of the nodes in the list is in the range [0, 104].
+* The number of the nodes in the list is in the range [0, 10^4].
 * -105 <= Node.val <= 105
 * pos is -1 or a valid index in the linked-list.

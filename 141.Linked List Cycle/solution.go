@@ -21,7 +21,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func hasCycle(head *ListNode) bool { // faster 100% less 8.56%
+func hasCycle(head *ListNode) bool { // faster 95.71% less 40.63%
 	if head == nil {
 		return false
 	}
