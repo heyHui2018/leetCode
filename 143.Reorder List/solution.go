@@ -52,8 +52,8 @@ func reorderList(head *ListNode) { // faster 96.75% less 42.21%
 		eNext := end.Next
 		head.Next = end  // head第一节点指向end第一节点
 		end.Next = hNext // end第一节点指向head第二节点
-		head = hNext
-		end = eNext
+		head = hNext     // head迭代
+		end = eNext      // end迭代
 	}
 	end.Next = nil
 }
