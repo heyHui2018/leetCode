@@ -9,7 +9,7 @@ import (
 
 
 解题思路：
-先序遍历，根-左-右
+后序遍历，左-右-根
 
 
 关键点：
@@ -24,7 +24,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func preorderTraversal(root *TreeNode) []int { // faster 100% less 39.35%
+func postorderTraversal(root *TreeNode) []int { // faster 100% less 48.66%
 	result := []int{}
 	if root == nil {
 		return result
@@ -34,13 +34,13 @@ func preorderTraversal(root *TreeNode) []int { // faster 100% less 39.35%
 }
 
 func traversal(root *TreeNode, list *[]int) {
-	*list = append(*list, root.Val)
 	if root.Left != nil {
 		traversal(root.Left, list)
 	}
 	if root.Right != nil {
 		traversal(root.Right, list)
 	}
+	*list = append(*list, root.Val)
 }
 
 func main() {
@@ -59,6 +59,6 @@ func main() {
 			},
 		},
 	}
-	result := preorderTraversal(root)
+	result := postorderTraversal(root)
 	fmt.Println(result)
 }
