@@ -5,7 +5,7 @@ package main
 
 
 解题思路：
-双指针
+同时存储min
 
 
 关键点：
