@@ -17,7 +17,7 @@ import (
 
 */
 
-func coinChange(coins []int, amount int) int { // faster 29.17% less 5.56%
+func coinChange(coins []int, amount int) int { // faster 9.09% less 16.67%
 	if amount == 0 {
 		return 0
 	}
