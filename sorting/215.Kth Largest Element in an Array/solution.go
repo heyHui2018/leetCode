@@ -10,20 +10,12 @@ import (
 
 
 解题思路：
-归并
 
 
 关键点：
 
 
 */
-
-var list = []int{1, 3, 5, 7, 9, 0, 8, 6, 4, 2}
-var s = 3
-
-func main() {
-	fastSelect(0, len(list)-1, list, len(list)-s)
-}
 
 func swap(a, b int, nums []int) {
 	temp := nums[a]
@@ -58,4 +50,9 @@ func fastSelect(left, right int, nums []int, k int) int { // faster 98.84% less 
 	default:
 		return fastSelect(left, curIndex-1, nums, k)
 	}
+}
+
+func main() {
+	list := []int{1, 3, 5, 7, 9, 0, 8, 6, 4, 2}
+	fastSelect(0, len(list)-1, list, len(list)-3)
 }
