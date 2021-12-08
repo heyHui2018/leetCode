@@ -16,12 +16,12 @@ import (
 
 */
 
-func numIslands(grid [][]byte) int { // faster 100% less 20.35%
+func rob(nums []int) int { // faster 100% less 67.27%
 
 	return 0
 }
 
 func main() {
-	result := numIslands([][]byte{})
+	result := rob([]int{-1, -2})
 	fmt.Println(result)
 }
